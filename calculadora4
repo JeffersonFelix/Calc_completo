@@ -1,0 +1,73 @@
+#!/bin/bash
+
+function somar {
+	read -a valor
+	if [ -z ${valor[0]} ] || [ -z ${valor[2]} ]
+	then
+		clear
+		echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+		echo "¨DICA: Digite Num1 operador Mum2¨"
+		echo "¨Ex: 1 + 1                      ¨"
+		echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+		echo
+	else
+
+		return $[ ${valor[0]} + ${valor[2]} ]
+	fi
+}
+
+function sub {
+	read -a valo
+	if [ -z ${valo[0]} ] || [ -z ${valo[2]} ]
+        then
+                clear
+                echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+                echo "¨DICA: Digite Num1 operador Mum2¨"
+                echo "¨Ex: 1 - 1                      ¨"
+                echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+                echo
+        else
+
+		return $[ ${valo[0]} - ${valo[2]} ]
+	fi
+}
+
+function div {
+	read -a val
+	if [ ${val[2]} -eq 0 ]
+	then
+		echo
+		echo "Digite um valor maior que zero no DIVISOR!"
+		echo
+
+	elif [ -z ${val[0]} ] || [ -z ${val[2]} ]
+	then
+		clear
+                echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+                echo "¨DICA: Digite Num1 operador Mum2¨"
+                echo "¨Ex: 2 / 1                      ¨"
+                echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+                echo
+
+
+	else
+		return $[ ${val[0]} / ${val[2]} ]
+	fi
+}
+
+function mult {
+	read -a va
+	if [ -z ${va[0]} ] || [ -z ${va[2]} ]
+        then
+                clear
+                echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+                echo "¨DICA: Digite Num1 operador Mum2¨"
+                echo "¨Ex: 1 * 1                      ¨"
+                echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+                echo
+        else
+
+		return $[ ${va[0]} * ${va[2]} ]
+fi
+}
+

@@ -1,0 +1,38 @@
+#!/bin/bash
+#|¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨|
+#| UNIPÊ Centro Univertário de João Pessoa   |
+#| Aluno: Jefferson Felix Gomes              |
+#| Matrícula: 1510010879                     |
+#| Email: jeffersonfelix15@hotmail.com       |
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
+
+saida="não"
+until [ $saida = "sim" ]
+do
+
+echo
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨¨¨¨¨¨¨Calculator¨¨¨¨¨¨¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+echo "[1] --Acesse a calculadora"
+echo "[2] --Sair"
+echo
+echo "OBS: UTILIZE ESPAÇOS EX: (NÚMERO OPERAÇÃO NÚMERO)"
+echo
+echo -n "Digite a sua opção: "
+read opca
+case $opca in
+
+1)
+. calculadora3
+echo -n "Digite a sua opção: "
+calculator
+;;
+
+2)
+
+saida="sim"
+;;
+esac
+done

@@ -1,0 +1,184 @@
+#!/bin/bash
+
+#|¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨|
+#| UNIPÊ Centro Univertário de João Pessoa   |
+#| Aluno: Jefferson Felix Gomes              |
+#| Matrícula: 1510010879                     |
+#| Email: jeffersonfelix15@hotmail.com       |
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
+
+function calculator {
+clear
+saida="não"
+until [ $saida = "sim" ]
+do
+
+echo
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨¨¨¨¨¨¨MENU¨¨¨¨¨¨¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+echo "[3] --Somar"
+echo "[4] --Subtrair"
+echo "[5] --Dividir"
+echo "[6] --Multiplicar"
+echo "[7] --Sair"
+echo
+echo "OBS: UTILIZE ESPAÇOS EX: (NÚMERO OPERAÇÃO NÚMERO)"
+echo
+echo -n "Digite a sua opção: "
+read opcao
+case $opcao in
+
+3)
+clear
+saidaa="não"
+until [ $saidaa = "sim" ]
+do
+
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨Você está somando!¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+echo "[s] --Sair."
+echo "[c] --Calcular."
+echo -n "Digite sua opção: "
+read sair
+
+	if [ $sair = "c" ]
+	then
+		clear	
+		. calculadora4
+		echo -n "Some: "
+		somar
+		echo "O resultado é : $?"
+		echo
+
+	elif [ $sair = "s" ]
+	then
+		saidaa="sim"
+		sleep 1
+	else
+		clear
+		echo "--Digite uma das opções--"
+		echo
+fi
+done
+;;
+
+4)
+clear
+said="nao"
+until [ $said = "sim" ]
+do
+
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨Você está subtraindo!¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+echo "[s] --Sair."
+echo "[c] --Calcular."
+echo -n "Digite a sua opção: "
+read sairr
+
+	if [ $sairr = "c" ]
+	then
+		clear
+		. calculadora4
+		echo -n "Subtraí: "
+		sub
+		echo "O resultado é : $?"
+		echo
+	
+	elif [ $sairr = "s" ]
+	then
+		said="sim"
+		sleep 1
+	else
+		clear
+                echo "--Digite uma das opções--"
+                echo
+	fi
+done
+;;
+
+5)
+clear
+sai="nao"
+until [ $sai = "sim" ]
+do
+
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨Você está dividindo!¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+echo "[s] --Sair."
+echo "[c] --Calcular."
+echo -n "Digite sua opção: "
+read sa
+
+        if [ $sa = "c" ]
+        then
+		clear
+		. calculadora4
+		echo -n "Dividir: "
+		div
+		echo "O resultado é : $?"
+		echo
+
+	elif [ $sa = "s" ]
+        then
+                sai="sim"
+                sleep 1
+        else
+                clear
+                echo "--Digite uma das opções--"
+                echo
+        fi
+done
+
+;;
+
+6)
+clear
+saaida="nao"
+until [ $saaida = "sim" ]
+do
+
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨Você está multiplicando!¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+echo "[s] --Sair."
+echo "[c] --Calcular."
+echo -n "Digite sua opção: "
+read saair
+
+        if [ $saair = "c" ]
+        then
+		clear
+		. calculadora4
+		echo -n "Multiplique: "
+		mult
+		echo "O resultado é : $?"
+		echo
+
+	elif [ $saair = "s" ]
+        then
+                saaida="sim"
+                sleep 1
+        else
+                clear
+                echo "--Digite uma das opções--"
+                echo
+        fi
+done
+
+;;
+
+7)
+
+saida="sim" ;;
+esac
+done
+}
