@@ -1,4 +1,10 @@
 #!/bin/bash
+#|¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨|
+#| UNIPÊ Centro Univertário de João Pessoa   |
+#| Aluno: Jefferson Felix Gomes              |
+#| Matrícula: 1510010879                     |
+#| Email: jeffersonfelix15@hotmail.com       |
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 
 function somar {
 	read -a valor
